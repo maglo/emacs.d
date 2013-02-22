@@ -10,8 +10,9 @@
 
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
-
 (setq ns-function-modifier 'hyper)
+
+;; Hyper-F for toggling fullscreen
 (global-set-key (kbd "H-f") 'ns-toggle-fullscreen)
 
 (setq ispell-program-name "/usr/local/bin/aspell")
