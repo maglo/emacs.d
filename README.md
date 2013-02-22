@@ -1,2 +1,4 @@
-emacs.d
+My Emacs Config
 =======
+
+For portability reasons
