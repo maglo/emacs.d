@@ -1,4 +1,4 @@
 My Emacs Config
 =======
 
-For portability reasons
+For portability reasons, and for sharing my config with others.
