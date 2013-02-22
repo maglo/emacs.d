@@ -208,6 +208,10 @@
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 (global-set-key (kbd "H-g") 'magit-status)
 
+;; Loccur - dölj alla rader som inte matchar...
+
+(global-set-key (kbd "M-s l") 'loccur)
+
 ;; fixa en custom-fil, måste ligga nederst
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
