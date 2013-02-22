@@ -13,7 +13,7 @@
 (setq ns-function-modifier 'hyper)
 
 ;; Hyper-F for toggling fullscreen
-(global-set-key (kbd "H-f") 'ns-toggle-fullscreen)
+(global-set-key (kbd "H-f") 'ns-toggle-fullscreen)    
 
 (setq ispell-program-name "/usr/local/bin/aspell")
 (setq ispell-list-command "list")
@@ -190,6 +190,23 @@
 (global-set-key (kbd "<f9>") 'next-error)
 (global-set-key (kbd "S-<f9>") 'previous-error)
 (global-set-key (kbd "C-<f9>") 'rgrep)
+
+;; fixa magit
+;; full screen magit-status
+
+(defadvice magit-status (around magit-fullscreen activate)
+  (window-configuration-to-register :magit-fullscreen)
+  ad-do-it
+  (delete-other-windows))
+
+(defun magit-quit-session ()
+  "Restores the previous window configuration and kills the magit buffer"
+  (interactive)
+  (kill-buffer)
+  (jump-to-register :magit-fullscreen))
+
+(define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
+(global-set-key (kbd "H-g") 'magit-status)
 
 ;; fixa en custom-fil, måste ligga nederst
 (setq custom-file (concat user-emacs-directory "custom.el"))
