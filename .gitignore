@@ -1,0 +1,6 @@
+backup-files/
+auto-save-list/
+*~
+*.dat
+*.elc
+bookmarks

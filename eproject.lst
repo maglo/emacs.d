@@ -1,0 +1,15 @@
+;; -*- mode: Lisp; -*-
+
+(setq prj-version nil)
+
+(setq prj-list
+      '(("eproject" "/Users/malo/Downloads/gabrielelanaro-emacs-for-python-ac1b31e/extensions/eproject")))
+
+(setq prj-last-open nil)
+
+(setq prj-frame-pos
+      '((top . 0)
+	(left . 0)
+	(width . 200)
+	(height . 59)))
+
