@@ -186,6 +186,14 @@
 
 (load-file "/Users/malo/Downloads/gabrielelanaro-emacs-for-python-ac1b31e/epy-init.el")
 
+;; skeleton does not work well in table-mode, deactivate
+;; hippie expand fucks up too
+
+
+;; also, don't be messin' with my captialize-word shortcut
+
+(global-set-key (kbd "M-c") 'capitalize-word)
+
 ;; rgrep och snabbtangent för next- och previous-error
 (global-set-key (kbd "<f9>") 'next-error)
 (global-set-key (kbd "S-<f9>") 'previous-error)
@@ -205,6 +213,7 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
+(require 'magit)
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 (global-set-key (kbd "H-g") 'magit-status)
 
