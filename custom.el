@@ -22,3 +22,6 @@
 
 (load-theme (quote solarized-dark) nil nil)
 
+(load-file "~/.emacs.d/elpa/color-theme-blackboard-0.0.2/color-theme-blackboard.el")
+
+(color-theme-blackboard)

@@ -6,7 +6,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
-(global-set-key (kbd "C-x C-R") 'recentf-open-files)
+(global-set-key (kbd "H-r") 'recentf-open-files)
 
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
@@ -28,6 +28,10 @@
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+;; add powerline for 
+(powerline-default)
 
 ;; hippie-exand
 (global-set-key "\257" (quote hippie-expand)) ;; M-/
@@ -79,27 +83,6 @@
      (if rm-mark-active 
        (rm-exchange-point-and-mark p) (exchange-point-and-mark p))))
 
-;; org-mode fixes
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-c l") 'org-store-link)
-
-(setq org-default-notes-file "~/Dropbox/notes.org")
-(setq org-refile-targets '((nil :maxlevel . 9)
-			   (org-agenda-files :maxlevel . 3)
-			   ))
-
-(setq org-log-done 'time)
-
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s)" "WAIT(w)" "|" "DONE(d)" "CANCELLED(c)")))
-
-(setq org-todo-keyword-faces
-      '(("TODO" . org-warning) ("STARTED" . "yellow") ("WAIT" . "orange") ("DONE" . org-done) ("CANCELLED" . "blue")))
-
-;; ace-jump i org-mode
-(eval-after-load "org"
-        '(define-key org-mode-map "\C-c " 'nil)) ; unmap key, was org-table-blank-field
 
 ;; fixar med path
 (add-to-list 'exec-path "/usr/local/bin")
@@ -186,6 +169,28 @@
 
 (load-file "/Users/malo/Downloads/gabrielelanaro-emacs-for-python-ac1b31e/epy-init.el")
 
+;; org-mode fixes
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c l") 'org-store-link)
+
+(setq org-default-notes-file "~/Dropbox/notes.org")
+(setq org-refile-targets '((nil :maxlevel . 9)
+			   (org-agenda-files :maxlevel . 3)
+			   ))
+
+(setq org-log-done 'time)
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STARTED(s)" "WAIT(w)" "|" "DONE(d)" "CANCELLED(c)")))
+
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning) ("STARTED" . "yellow") ("WAIT" . "orange") ("DONE" . org-done) ("CANCELLED" . "blue")))
+
+;; ace-jump i org-mode
+(eval-after-load "org"
+        '(define-key org-mode-map "\C-c " 'nil)) ; unmap key, was org-table-blank-field
+
 ;; skeleton does not work well in table-mode, deactivate
 ;; hippie expand fucks up too
 
@@ -219,7 +224,14 @@
 
 ;; Loccur - dölj alla rader som inte matchar...
 
+(require 'loccur)
 (global-set-key (kbd "M-s l") 'loccur)
+
+;; yasnippets
+
+(require 'yasnippet)
+(setq yas/root-directory (concat user-emacs-directory "mysnippets"))
+(yas/load-directory yas/root-directory)
 
 ;; fixa en custom-fil, måste ligga nederst
 (setq custom-file (concat user-emacs-directory "custom.el"))
