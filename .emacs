@@ -125,11 +125,107 @@
 ;; Add Urban Dictionary to webjump
 (eval-after-load "webjump"
 '(add-to-list 'webjump-sites
-              '("Urban Dictionary" .
-                [simple-query
-                 "www.urbandictionary.com"
-                 "http://www.urbandictionary.com/define.php?term="
-                 ""])))
+              '(
+ 		("Urban Dictionary" .
+		 [simple-query
+		  "www.urbandictionary.com"
+		  "http://www.urbandictionary.com/define.php?term="
+		  ""])
+		("Stack Overflow" .
+		 [simple-query
+		  "stackoverflow.com"
+		  "https://stackoverflow.com/search?q"
+		  ""])
+
+		("Programmers" .
+		 [simple-query
+		  "programmers.stackexchange.com"
+		  "http://programmers.stackexchange.com/search?q"
+		  ""])
+		("Super User" .
+		 [simple-query
+		  "superuser.com"
+		  "https://superuser.com/search?q"
+		  ""])
+		("Serverfault" .
+		 [simple-query
+		  "serverfault.com"
+		  "https://serverfault.com/search?q"
+		  ""])
+		("Ask Ubuntu" .
+		 [simple-query
+		  "askubuntu.com"
+		  "http://askubuntu.com/search?q"
+		  ""])
+		("Unix & Linux" .
+		 [simple-query
+		  "unix.stackexchange.com"
+		  "https://unix.stackexchange.com/search?q"
+		  ""])
+		("Programmers" .
+		 [simple-query
+		  "programmers.stackexchange.com"
+		  "https://programmers.stackexchange.com/search?q"
+		  ""])
+		("IT Security" .
+		 [simple-query
+		  "security.stackexchange.com"
+		  "http://security.stackexchange.com/search?q"
+		  ""])
+		("Nullege" .
+		 [simple-query
+		  "nullege.com"
+		  "http://nullege.com/codes/search?cq"
+		  ""])
+		("Google" .
+		 [simple-query
+		  "google.com"
+		  "https://encrypted.google.com/#q="
+		  ""])
+		("Google Images" .
+		 [simple-query
+		  "google.com"
+		  "https://encrypted.google.com/images?q"
+		  ""])
+		("Google Videos" .
+		 [simple-query
+		  "google.com"
+		  "https://encrypted.google.com/search?tbs=vid%3A1&q"
+		  ""])
+		("Google Translate En-Sv" .
+		 [simple-query
+		  "google.com"
+		  "http://translate.google.com/#en|sv|"
+		  ""])
+		("Google Translate Sv-En" .
+		 [simple-query
+		  "google.com"
+		  "http://translate.google.com/#sv|en|"
+		  ""])
+					; Default to translating anything to Swedish
+		("Google Translate" .
+		 [simple-query
+		  "google.com"
+		  "http://translate.google.com/#auto|sv|"
+		  ""])
+		("Google Translate Auto-Sv" .
+		 [simple-query
+		  "google.com"
+		  "http://translate.google.com/#auto|sv|"
+		  ""])
+		("Google Translate Auto-En" .
+		 [simple-query
+		  "google.com"
+		  "http://translate.google.com/#auto|en|"
+		  ""])
+		("Urban Dictionary" .
+		 [simple-query
+		  "www.urbandictionary.com"
+		  "http://www.urbandictionary.com/define.php?term"
+		  ""])
+		)
+	      )
+)
 
 ;; Save point position between sessions
 (require 'saveplace)
@@ -187,6 +283,10 @@
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning) ("STARTED" . "yellow") ("WAIT" . "orange") ("DONE" . org-done) ("CANCELLED" . "blue")))
 
+(setq org-mobile-inbox-for-pull "~/Dropbox/flagged.org")
+
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+
 ;; ace-jump i org-mode
 (eval-after-load "org"
         '(define-key org-mode-map "\C-c " 'nil)) ; unmap key, was org-table-blank-field
@@ -232,6 +332,26 @@
 (require 'yasnippet)
 (setq yas/root-directory (concat user-emacs-directory "mysnippets"))
 (yas/load-directory yas/root-directory)
+
+;; org-present
+(add-to-list 'load-path "~/.emacs.d/org-present")
+(autoload 'org-present "org-present" nil t)
+
+(add-hook 'org-present-mode-hook
+	  (lambda ()
+	    (org-present-big)
+	    (org-display-inline-images)))
+
+(add-hook 'org-present-mode-quit-hook
+	  (lambda ()
+	    (org-present-small)
+	    (org-remove-inline-images)))
+
+;; gnuplot
+(require 'gnuplot)
+(setq gnuplot-program "/usr/local/bin/gnuplot")
+(setq auto-mode-alist 
+      (append '(("\\.\\(gp\\|gnuplot\\)$" . gnuplot-mode)) auto-mode-alist))
 
 ;; fixa en custom-fil, måste ligga nederst
 (setq custom-file (concat user-emacs-directory "custom.el"))

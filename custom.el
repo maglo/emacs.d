@@ -12,6 +12,7 @@
  '(jabber-history-enabled t)
  '(jabber-show-resources nil)
  '(org-agenda-files (quote ("~/Dropbox/dagbok-2013.org.gpg" "~/Dropbox/notes.org" "~/Dropbox/dagbok-2012.org.gpg")))
+ '(org-return-follows-link t)
  '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
