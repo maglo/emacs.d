@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fixme: Insert a fixme note
+# key: fixme
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/wrap-around-region 't))
+# --
+:fixme:\``yas/selected-text`${1:A note on what to fix}\`$0

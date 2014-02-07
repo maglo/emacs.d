@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rbox: Textbox for Restricted
+# key: rbox
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+:rbox:\``yas/selected-text`${1:box content}\`$0

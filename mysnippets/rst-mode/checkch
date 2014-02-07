@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Checklist chapter
+# key: checkch
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+.. chapter::
+
+$0

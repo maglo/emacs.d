@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sbox: Textbox for Secret
+# key: sbox
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+:sbox:\``yas/selected-text`${1:box content}\`$0

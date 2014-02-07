@@ -353,6 +353,9 @@
 (setq auto-mode-alist 
       (append '(("\\.\\(gp\\|gnuplot\\)$" . gnuplot-mode)) auto-mode-alist))
 
+(require 'ox-reveal)
+(setq org-reveal-root "file:///Users/malo/code/reveal.js")
+
 ;; fixa en custom-fil, måste ligga nederst
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)

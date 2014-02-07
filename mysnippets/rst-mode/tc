@@ -1,0 +1,6 @@
+#name : Tabellcell kolumn B-n
+#expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+#contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# --
+      -  ${1:Cell B-n}
+$0

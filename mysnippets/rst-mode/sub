@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Subscript
+# key: sub
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:sub:\`${1:text}\`$0

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Rubriknivå 6
+# key: rub6
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+${1:Rubriknivå 6}
+${1:$(make-string (string-width text) ?\.)}
+
+$0

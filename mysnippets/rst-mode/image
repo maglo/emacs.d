@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Insert an image
+# key: image
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+.. image:: ${1:path}
+
+$0

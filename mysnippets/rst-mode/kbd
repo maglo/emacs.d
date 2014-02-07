@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Keyboard
+# key: kbd
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:kbd:\`${1:Control-x Control-v}\`$0

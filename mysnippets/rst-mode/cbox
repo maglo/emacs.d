@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: cbox: Textbox for Confidential
+# key: cbox
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+:cbox:\``yas/selected-text`${1:box content}\`$0

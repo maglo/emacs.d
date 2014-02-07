@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Superscript
+# key: sup
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:sup:\`${1:text}\`$0

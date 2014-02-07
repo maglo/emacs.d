@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Checklist item
+# key: chi
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+.. checklist:: `yas/selected-text`${1:The list of typeconfigs to apply the checklist item to}
+$0

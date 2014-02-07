@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Boxed text
+# key: box
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+.. topic:: ${1:topic}
+
+   ${2:text}
+
+$0

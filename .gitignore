@@ -6,3 +6,10 @@ auto-save-list/
 bookmarks
 /.places
 
+
+/tramp
+/mysnippets/text-mode/Nicklas Haglund.yasnippet
+/mysnippets/text-mode/kgpet.yasnippet
+/.org-id-locations
+/.#custom.el
+/#custom.el#

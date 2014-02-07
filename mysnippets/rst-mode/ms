@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Menu selection
+# key: ms
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:menuselection:\`${1:text}\`$0

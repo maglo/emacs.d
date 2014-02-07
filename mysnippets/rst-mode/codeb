@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: codeb: Insert a codeblock
+# key: codeb
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+.. code-block:: ${1:Code block type, e.g. powershell}
+
+   ${2:Code block content}
+
+$0

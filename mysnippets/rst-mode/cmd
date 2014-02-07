@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Command
+# key: cmd
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:command:\`${1:xcopy <src> <dst>}\`$0

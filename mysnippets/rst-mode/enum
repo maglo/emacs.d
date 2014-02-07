@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: enum: Insert auto-enumeration
+# key: enum
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:enum:\`${1:Enum prefix, or %d to place enum anywhere}\`$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name : File annotation
+# key: file
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:file:\`${1:file}\`$0

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: anchor: Insert an anchor for references
+# key: anchor
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't) (random 't))
+# --
+.. _${1:Anchor text}-`(format "%08d" (random (expt 10 8)))`:
+
+$0

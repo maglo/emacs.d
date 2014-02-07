@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ibox: Textbox for Internet
+# key: ibox
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+:ibox:\``yas/selected-text`${1:box content}\`$0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: obox: Textbox for Open
+# key: obox
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+:obox:\``yas/selected-text`${1:box content}\`$0

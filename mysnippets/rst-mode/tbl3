@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# key: tbl3
+# name : Tabell med 3 kolumner
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+.. tabularcolumns:: |l|l|l|
+.. cssclass:: longtable
+.. list-table::
+   :header-rows: 1
+
+   *  -  ${1:Kolumntitel 1}
+      -  ${2:Kolumntitel 2}
+      -  ${3:Kolumntitel 3}
+   *  -  $0

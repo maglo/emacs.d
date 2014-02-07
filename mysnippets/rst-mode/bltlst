@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Bullet list
+# key: bltlst
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+ - ${1:text}
+ - ${2:text}
+$0

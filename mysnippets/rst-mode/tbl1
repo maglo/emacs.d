@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# key: tbl1
+# name : Tabell med 1 kolumn
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+.. tabularcolumns:: |l|
+.. cssclass:: longtable
+.. list-table::
+   :header-rows: 1
+
+   *  -  ${1:Kolumntitel 1}
+   *  -  $0

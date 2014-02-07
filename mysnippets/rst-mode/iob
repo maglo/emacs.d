@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Input/Output block
+# key: iob
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+`(newline)`
+.. io:: ${1:block title}
+
+   ${2:input-output}
+
+$0

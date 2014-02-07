@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Insert a Warning admonition
+# key: warn
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 'nil))
+# --
+.. warning:: ${1:warning title}
+
+   ${2:warning text}
+
+$0

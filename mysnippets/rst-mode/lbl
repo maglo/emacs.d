@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: GUI label
+# key: lbl
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:guilabel:\`${1:&Cancel}\`$0

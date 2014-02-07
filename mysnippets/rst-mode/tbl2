@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# key: tbl2
+# name : Tabell med 2 kolumner
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+`(newline)`
+.. tabularcolumns:: |l|l|
+.. cssclass:: longtable
+.. list-table::
+   :header-rows: 1
+
+   *  -  ${1:Kolumntitel 1}
+      -  ${2:Kolumntitel 2}
+   *  -  $0

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Input/Output inline
+# key: ioi
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# expand-env: (yas/wrap-around-region 't)
+# --
+:io:\`${1:input-output}\`$0

@@ -1,0 +1,6 @@
+#name : Listentry
+#expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+#contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# --
+ - ${1:text}
+$0

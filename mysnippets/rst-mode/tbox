@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: box: Coloured textbox
+# key: tbox
+# contributor: Fredrik forsell <fredrik.forsell@basalt.se>
+# expand-env: ((yas/indent-line 'none) (yas/wrap-around-region 't)) 
+# --
+:box:\``yas/selected-text`${1:box content}${2:$(make-string (min (length text) 1) ?\|)}${2:background color}${3:$(make-string (min (length text) 1) ?\|)}${3:foreground color}\`$0

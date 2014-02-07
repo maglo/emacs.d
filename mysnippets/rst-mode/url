@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Reference an URL
+# key: url
+# contributor: Henrik Holmboe <henrik.holmboe@bitsec.se>
+# --
+\`${1:text}\`_$0
+
+.. _$1: ${2:url}
