@@ -9,7 +9,7 @@
 
 (setq prj-frame-pos
       '((top . 19)
-	(left . 1440)
-	(width . 234)
-	(height . 71)))
+	(left . 0)
+	(width . 200)
+	(height . 61)))
 

@@ -356,6 +356,58 @@
 (require 'ox-reveal)
 (setq org-reveal-root "file:///Users/malo/code/reveal.js")
 
+;; open file with
+
+(defun prelude-open-with ()
+  "Simple function that allows us to open the underlying
+file of a buffer in an external program."
+  (interactive)
+  (when buffer-file-name
+    (shell-command (concat
+                    (if (eq system-type 'darwin)
+                        "open"
+                      (read-shell-command "Open current file with: "))
+                    " '"
+                    buffer-file-name
+		    "'"))))
+
+(global-set-key (kbd "C-c o") 'prelude-open-with)
+
+(defun split-string-chars (string chars &optional omit-nulls)
+  (let ((separators (make-hash-table))
+        (last 0)
+        current
+        result)
+    (dolist (c chars) (setf (gethash c separators) t))
+    (dotimes (i (length string)
+                (progn
+                 (when (< last i)
+                   (push (substring string last i) result))
+                 (reverse result)))
+      (setq current (aref string i))
+      (when (gethash current separators)
+        (when (or (and (not omit-nulls) (= (1+ last) i))
+                  (/= last i))
+          (push (substring string last i) result))
+        (setq last (1+ i))))))
+
+(defun unique-lines (start end)
+  "This will remove all duplicating lines in the region.
+Note empty lines count as duplicates of the empy line! All empy lines are 
+removed sans the first one, which may be confusing!"
+  (interactive "r")
+  (let ((hash (make-hash-table :test #'equal)) (i -1))
+    (dolist (s (split-string-chars
+                (buffer-substring-no-properties start end) '(?\n) t)
+               (let ((lines (make-vector (1+ i) nil)))
+                 (maphash 
+                  (lambda (key value) (setf (aref lines value) key))
+                  hash)
+                 (kill-region start end)
+                 (insert (mapconcat #'identity lines "\n"))))
+      (unless (gethash s hash)
+        (setf (gethash s hash) (incf i))))))
+
 ;; fixa en custom-fil, måste ligga nederst
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)

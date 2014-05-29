@@ -31,3 +31,7 @@
 (load-file "~/.emacs.d/elpa/color-theme-blackboard-0.0.2/color-theme-blackboard.el")
 
 (color-theme-blackboard)
+
+(autoload 'es-mode "es-mode.el"
+  "Major mode for editing Elasticsearch queries" t)
+(add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
