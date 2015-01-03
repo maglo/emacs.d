@@ -1,0 +1,30 @@
+;; Object week0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "week0/"
+  :tables (list 
+   (semanticdb-table "tes.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [50 59])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60 73]))                  
+                :type "int")
+                nil [41 322]))          
+    :file "tes.c"
+    :pointmax 323
+    :fsize 322
+    :lastmodtime '(21609 49886 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!malo!code!software-security!week0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

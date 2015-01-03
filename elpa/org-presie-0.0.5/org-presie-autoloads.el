@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads (org-pres-mode) "org-presie" "org-presie.el" (20928
-;;;;;;  32862))
+;;;### (autoloads nil "org-presie" "org-presie.el" (21669 14383 0
+;;;;;;  0))
 ;;; Generated autoloads from org-presie.el
 
 (autoload 'org-pres-mode "org-presie" "\
@@ -20,7 +20,8 @@ argument forces this mode off; otherwise the mode is toggled.
 
 ;;;***
 
-;;;### (autoloads nil nil ("org-presie-pkg.el") (20928 32862 493951))
+;;;### (autoloads nil nil ("org-presie-pkg.el") (21669 14383 720951
+;;;;;;  0))
 
 ;;;***
 

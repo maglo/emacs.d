@@ -28,7 +28,8 @@
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 ;; add powerline for 
 (powerline-default)
@@ -263,7 +264,7 @@
         (ispell-buffer)))
     (message nil)))
 
-(load-file "/Users/malo/Downloads/gabrielelanaro-emacs-for-python-ac1b31e/epy-init.el")
+;;(load-file "/Users/malo/Downloads/gabrielelanaro-emacs-for-python-ac1b31e/epy-init.el")
 
 ;; org-mode fixes
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -334,18 +335,18 @@
 (yas/load-directory yas/root-directory)
 
 ;; org-present
-(add-to-list 'load-path "~/.emacs.d/org-present")
-(autoload 'org-present "org-present" nil t)
+;;(add-to-list 'load-path "~/.emacs.d/org-present")
+;;(autoload 'org-present "org-present" nil t)
 
-(add-hook 'org-present-mode-hook
-	  (lambda ()
-	    (org-present-big)
-	    (org-display-inline-images)))
+;;(add-hook 'org-present-mode-hook
+;;	  (lambda ()
+;;	    (org-present-big)
+;;	    (org-display-inline-images)))
 
-(add-hook 'org-present-mode-quit-hook
-	  (lambda ()
-	    (org-present-small)
-	    (org-remove-inline-images)))
+;;(add-hook 'org-present-mode-quit-hook
+;;	  (lambda ()
+;;	    (org-present-small)
+;;	    (org-remove-inline-images)))
 
 ;; gnuplot
 (require 'gnuplot)
@@ -353,8 +354,12 @@
 (setq auto-mode-alist 
       (append '(("\\.\\(gp\\|gnuplot\\)$" . gnuplot-mode)) auto-mode-alist))
 
-(require 'ox-reveal)
-(setq org-reveal-root "file:///Users/malo/code/reveal.js")
+;;(require 'ox-reveal)
+;;(setq org-reveal-root "file:///Users/malo/code/reveal.js")
+
+(add-to-list 'load-path "~/.emacs.d/ox-rst")
+(require 'ox-rst)
+
 
 ;; open file with
 
