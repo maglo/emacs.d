@@ -357,8 +357,8 @@
 ;;(require 'ox-reveal)
 ;;(setq org-reveal-root "file:///Users/malo/code/reveal.js")
 
-(add-to-list 'load-path "~/.emacs.d/ox-rst")
-(require 'ox-rst)
+;;(add-to-list 'load-path "~/.emacs.d/ox-rst")
+;;(require 'ox-rst)
 
 
 ;; open file with
