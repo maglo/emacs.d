@@ -5,7 +5,7 @@ auto-save-list/
 *.elc
 bookmarks
 /.places
-
+/url
 
 /tramp
 /mysnippets/text-mode/Nicklas Haglund.yasnippet
